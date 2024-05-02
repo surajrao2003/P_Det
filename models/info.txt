@@ -1,1 +1,2 @@
-Copy the model files from the google drive link given in readme and paste them here in this 'models' directory. Then give the relative path to the model file in the main_execution.py to perform inference.
+Copy the model files from the google drive link given in readme and paste them here in this 'models' directory. 
+Then give the relative path to the model file in the main_execution.py to perform inference.
