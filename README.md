@@ -27,7 +27,7 @@ All the files are execution ready with relative paths including input data provi
     - **RTSP** - give username and password of the IP camera in the switch case.
     - **dataset** - give path to the dataset (can use the images in imagedata directory).
     - **webcam** - no need of any path.
-  - **coco_yaml_path** - give path to the config_custom_data.yamls file which is present in the models directory.
+  - **coco_yaml_path** - give path to the config_custom_data.yaml file which is present in the models directory.
   - **output_dir** - give path of the 'outputfolder' directory where the outputs will be stored.
   - **device** - choose the device GPU or CPU using 'gpu' or  'GPU' or 'cpu' or 'CPU'.
   - **num_processes** - 0 for no multiprocessing and >0 for multiprocessing (from observations, maximum 3 processes are supported on nvidia geforce rtx 3060 gpu, so num_processes can be 1 or 2 or 3 for multiprocessing).                                                                                                                                                                                       Note:- num_processes = 0 or num_processes = 1 will give almost similar results , just that in the case of the latter, the python multiprocessing module will be used.
