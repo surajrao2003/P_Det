@@ -9,14 +9,14 @@
 
 ## Instructions to Run 
 - Clone the repository
-- Copy the model files and yaml file from the google drive link into the 'models' folder : [Model Files](link_here)
-- Make sure the required libraries are installed
+- Copy the model files and yaml file from the google drive link into the 'models' folder : [yaml file and model files link](https://drive.google.com/drive/folders/19HjjttEuMpDyQ-FggPisqYlM0GaeJPsa?usp=sharing)
+- Make sure the required libraries are installed.
 - Execute the main_execution.py file to run inference.
 
 ## Description
 This repository contains a system for Yolov8 model inference with configurable options for different input types, model selection, optimization methods like quantization, skipping frames, etc  and multiprocessing. 
 
-All the files are execution ready with relative paths including input data.
+All the files are execution ready with relative paths including input data provided in the directories which you can use.
 
 ## Directories
 ### **code_files directory** 
@@ -60,7 +60,7 @@ All the files are execution ready with relative paths including input data.
 ### **outputfolder directory**
 - For storing the outputs of multiple processes and multiple streams with their respective numbers.
 
-### **yolov8_quantization_methods** 
+### **yolov8_quantization_methods directory** 
 - Consists of different onnx quantization techniques that I used to quantize yolov8s onnx model in order to reduce its model size and then these quantized models were used for inferencing.
 
 
