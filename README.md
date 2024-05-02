@@ -1,6 +1,5 @@
 # YOLOv8 People detection 
 
-
 ## Device Specifications
 - **CPU**: 13th Gen Intel® Core™ i9-13900K 32
 - **RAM**: 32 GB
@@ -8,13 +7,19 @@
 - **Threads**: 24 (one per each core)
 - **GPU**: Nvidia GeForce RTX 3060 (12 GB)
 
+## Instructions to Run 
+- Clone the repository
+- Copy the model files and yaml file from the google drive link into the 'models' folder : [Model Files](link_here)
+- Make sure the required libraries are installed
+- Execute the main_execution.py file to run inference.
+
 ## Description
 This repository contains a system for Yolov8 model inference with configurable options for different input types, model selection, optimization methods like quantization, skipping frames, etc  and multiprocessing. 
 
 All the files are execution ready with relative paths including input data.
 
 ## Directories
-### **code_files directory** :-
+### **code_files directory** 
 - **main_execution.py** - This is the main executable file , where the user can set variable values according to their use case. The variables that can be set are :-
   - **model** - choose the model to be used from the switch cases.
   - **input type** - choose either video or rtsp or dataset or webcam as input.
@@ -34,10 +39,30 @@ All the files are execution ready with relative paths including input data.
   - **ssim** - specify ssim threshold. 0.88 gives good results. Range 0-1 (1 means similar and no skipping).
   - **motion detection** - specify motion detection threshold. 25 gives good results.
 
-- **inferencing.py** - 
-- **preprocesing.py**
-- **postprocessing.py**
-- **multiprocessing.py**
-- **optimization_methods.py**
+**After setting up these variables, you can execute the main_execution.py file.**
+
+- **inferencing.py** - Consists of functions related to model initialization and model inferencing.
+- **preprocesing.py** - Consists of functions which perform preprocessing such as scaling, padding and resizing on the input data.
+- **postprocessing.py** - Consists of functions related to postprocessing such as filtering based on confidence, IOU and NMS, etc.
+- **multiprocessing.py** - Consists of the multiprocessing code, so when the num_processes > 0 , this file is called and it is responsible for execution of multiple processes in parallel.
+- **optimization_methods.py** - Consists of optimization methods which can skip the processing of some frames based on their similarities. So methods like 'ssim' and 'motiondetection' have been used. When any of these 2 optimization methods are chosen, this file is called.
+
+### **imagedata directory** 
+-  Consists of images and labels folder. Can give the path to the images folder in the case of dataset input.
+
+### **videodata directory**
+-  Consists of few video inputs that were used for inferencing and benchmarking.
+
+### **models directory**
+- Consists of the coco_yaml_file whose path must be provided in the main_execution.py. (copy from google drive link). 
+- Contains multiple models (onnx models, quantized models) that can be used (copy them from google drive link into the models directory). Most of the models are of yolov8s version because that was observed to be suitable for edge deployment in terms of memory and accuracy.
+
+### **outputfolder directory**
+- For storing the outputs of multiple processes and multiple streams with their respective numbers.
+
+### **yolov8_quantization_methods** 
+- Consists of different onnx quantization techniques that I used to quantize yolov8s onnx model in order to reduce its model size and then these quantized models were used for inferencing.
+
+
 
 
