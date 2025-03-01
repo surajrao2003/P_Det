@@ -1,4 +1,4 @@
-# YOLOv8 People detection 
+## People detection using YoloV8
 
 ## Device Specifications
 - **CPU**: 13th Gen Intel® Core™ i9-13900K 32
